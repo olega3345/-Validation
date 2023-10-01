@@ -58,7 +58,7 @@ public class DepartmentService {
     }
 
     public Map<Integer, List<Employee>> getEmployeesByDepartment(Integer departmentId) {
-        return employeeService.getAll().stream()
+         return employeeService.getAll().stream()
                 .filter(e -> departmentId == null || e.getDepartmentId() == departmentId)
                 .collect(groupingBy(Employee::getDepartmentId, toList()));
     }
