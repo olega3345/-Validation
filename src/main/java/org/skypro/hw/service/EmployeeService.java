@@ -79,7 +79,7 @@ public class EmployeeService {
 
     private void validateFirstAndLastNames(String firstName, String lastName) {
         if (!StringUtils.isAlpha(firstName)) {
-            throw new ValidationException("Имя содержит запрещенные символы");
+             throw new ValidationException("Имя содержит запрещенные символы");
         }
 
         if (!StringUtils.isAlpha(lastName)) {
